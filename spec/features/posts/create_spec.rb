@@ -2,7 +2,7 @@ require 'rails_helper'
 
 context 'When creating a Post', :type => :feature do
 
-  let!(:post){create(:post)}
+  let!(:post){build(:post)}
 
   before :each do
     visit '/posts'
