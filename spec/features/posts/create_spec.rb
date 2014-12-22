@@ -1,6 +1,8 @@
+require 'rails_helper'
+
 context 'When creating a Post', :type => :feature do
 
-  let!(:event){create(:event)}
+  let!(:post){create(:post)}
 
   before :each do
     visit '/posts'
@@ -18,7 +20,5 @@ context 'When creating a Post', :type => :feature do
     click_on 'Save'
     expect(page).to have_content post.description
   end
-
-
 
 end
