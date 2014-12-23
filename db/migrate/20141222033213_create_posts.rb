@@ -4,8 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.references :user, index: true
       t.string :title
       t.text :body
-      t.boolean :published
-
+      t.boolean :published, default: false, null: false
       t.timestamps null: false
     end
     add_foreign_key :posts, :users
