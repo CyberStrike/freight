@@ -21,7 +21,7 @@ context 'When creating a Post', :type => :feature do
     expect(page).to have_content post.body
   end
 
-  it 'should not be visible on index if not published' do
+  it 'it should not be visible on index if not published' do
     post_defaults
     click_on 'Save'
     visit '/posts'
